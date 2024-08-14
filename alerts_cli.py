@@ -1,8 +1,9 @@
+import os
 import click
 import requests
 from tabulate import tabulate
 
-API_URL = "http://localhost:5005"
+API_URL = os.getenv('ALERTS_API_URL', 'http://localhost:5005')
 
 @click.group()
 def cli():
